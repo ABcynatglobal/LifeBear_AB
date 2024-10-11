@@ -22,7 +22,6 @@ This Python script is designed to clean a CSV file (`JapanLifeBear.csv`) by:
     - If the file is empty or not found, appropriate error messages are shown, and the script exits.
   
 2. **Data Cleaning**:
-    - The script drops rows where the `birthday_on` or `gender` columns have missing values.
     - It renames the columns `mail_address` to `email` and `birthday_on` to `date_of_birth`.
 
 3. **Email Validation**:
