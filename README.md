@@ -5,9 +5,8 @@
 
 This Python script is designed to clean a CSV file (`JapanLifeBear.csv`) by:
 1. Validating email addresses using a regular expression.
-2. Dropping rows with missing values in specific columns (`birthday_on` and `gender`).
-3. Renaming columns for consistency.
-4. Filtering valid email addresses, removing duplicates, and saving the cleaned data to separate CSV files.
+2. Renaming columns for consistency.
+3. Filtering valid email addresses, removing duplicates, and saving the cleaned data to separate CSV files.
 
 ## Prerequisites
 
