@@ -1,10 +1,13 @@
 
-# Duplicate Email Cleaner Script
+# LifeBear Script Breakdown
 
 This script processes a CSV file, removes duplicate and invalid email addresses, and saves cleaned and erroneous entries to separate files. It handles common file I/O errors and utilizes regex for email validation. The output includes cleaned data, duplicate entries, and invalid email entries, all saved into designated folders.
 
 ## Prerequisites
-
+<!-- python code block -->
+```python
+`pip install pandas`
+```
 - Python 3.x
 - pandas library (`pip install pandas`)
 
@@ -35,9 +38,25 @@ This script processes a CSV file, removes duplicate and invalid email addresses,
 ## Usage
 
 1. **Run the Script:**
-   ```bash
-   python script.py
-   ```
+  <!-- python code block -->
+```python
+# Read the initial CSV file with separator modification and low memory usage
+try:
+    df = pd.read_csv("JapanLifeBear.csv", sep=';', low_memory=True)
+    if df.empty:
+        print("Warning: The input CSV file is empty.")
+    else:
+        print("CSV file loaded successfully.")
+except FileNotFoundError:
+    print("Error: The file 'JapanLifeBear.csv' was not found.")
+    sys.exit(1)
+except pd.errors.EmptyDataError:
+    print("Error: The file is empty.")
+    sys.exit(1)
+except Exception as e:
+    print(f"An error occurred while reading the file: {e}")
+    sys.exit(1)
+```
    Ensure the `JapanLifeBear.csv` file exists in the same directory as the script, or provide the correct path.
 
 2. **Input:**
